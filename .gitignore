@@ -1,0 +1,5 @@
+*.pyc
+./BEAT2/
+./examples/motion/
+./emage_evaltools/
+./datasets/data_json/*

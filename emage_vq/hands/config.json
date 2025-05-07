@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "EmageVQVAEConv"
+  ],
+  "class_name": "EmageVQVAEConv",
+  "model_type": "emage_vqvaeconv",
+  "name_pyfile": "models.emage_audio.modeling_emage_audio",
+  "pose_dims": 180,
+  "pose_fps": 30,
+  "pose_length": 64,
+  "stride": 20,
+  "torch_dtype": "float32",
+  "transformers_version": "4.30.2",
+  "vae_codebook_size": 256,
+  "vae_grow": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "vae_layer": 2,
+  "vae_length": 256,
+  "vae_quantizer_lambda": 1.0,
+  "vae_test_dim": 180,
+  "vae_test_len": 64,
+  "vae_test_stride": 20,
+  "variational": false
+}
