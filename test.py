@@ -73,13 +73,15 @@ class EmageMotionGenerator:
             face_latent = latent_dict["rec_face"] if self.model.cfg.lf > 0 and self.model.cfg.cf == 0 else None
             upper_latent = latent_dict["rec_upper"] if self.model.cfg.lu > 0 and self.model.cfg.cu == 0 else None
             hands_latent = latent_dict["rec_hands"] if self.model.cfg.lh > 0 and self.model.cfg.ch == 0 else None
-            lower_latent = latent_dict["rec_lower"] if self.model.cfg.ll > 0 and self.model.cfg.cl == 0 else None
+            #lower_latent = latent_dict["rec_lower"] if self.model.cfg.ll > 0 and self.model.cfg.cl == 0 else None
+            lower_latent = None
             
             # 处理分类索引
             face_index = torch.max(F.log_softmax(latent_dict["cls_face"], dim=2), dim=2)[1] if self.model.cfg.cf > 0 else None
             upper_index = torch.max(F.log_softmax(latent_dict["cls_upper"], dim=2), dim=2)[1] if self.model.cfg.cu > 0 else None
             hands_index = torch.max(F.log_softmax(latent_dict["cls_hands"], dim=2), dim=2)[1] if self.model.cfg.ch > 0 else None
-            lower_index = torch.max(F.log_softmax(latent_dict["cls_lower"], dim=2), dim=2)[1] if self.model.cfg.cl > 0 else None
+            #lower_index = torch.max(F.log_softmax(latent_dict["cls_lower"], dim=2), dim=2)[1] if self.model.cfg.cl > 0 else None
+            lower_index = None
 
             # 解码运动
             all_pred = self.motion_vq.decode(
