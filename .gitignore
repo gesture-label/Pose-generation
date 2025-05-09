@@ -4,3 +4,5 @@
 ./emage_evaltools/
 ./datasets/data_json/*emage_evaltools/smplx_models/smplx/SMPLX_NEUTRAL_2020.npz
 checkpoints/pytorch_model.bin
+emage_evaltools/smplx_models/smplx/SMPLX_NEUTRAL_2020.npz
+checkpoints/pytorch_model.bin
